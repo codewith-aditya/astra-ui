@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude - AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="logo">
+                    <div class="logo-icon">✦</div>
+                    <span>Claude</span>
+                </div>
+            </div>
+            
+            <div style="padding: 0 16px;">
+                <button class="new-chat-btn" id="newChatBtn">
+                    <span>+</span>
+                    <span>New chat</span>
+                </button>
+            </div>
+            
+            <div class="chat-history" id="chatHistory">
+                <!-- Chat history will be populated by JavaScript -->
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="user-profile">
+                    <div class="user-avatar">A</div>
+                    <div class="user-info">
+                        <div class="user-name">aditya</div>
+                        <div class="user-plan">Free plan</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="top-bar">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <div class="model-selector">
+                    <span>Sonnet 4.6</span>
+                    <span>▼</span>
+                </div>
+                <div></div>
+            </div>
+
+            <div class="chat-area" id="chatArea">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-header">
+                        <div class="plan-badge">
+                            <span>Free plan</span>
+                            <span>•</span>
+                            <span>Upgrade</span>
+                        </div>
+                        <div class="welcome-icon">✦</div>
+                        <h1 class="welcome-title">Hey there, aditya</h1>
+                    </div>
+                </div>
+
+                <!-- Chat Messages -->
+                <div class="chat-messages" id="chatMessages" style="display: none;">
+                    <!-- Messages will be added here -->
+                </div>
+            </div>
+
+            <!-- Input Area -->
+            <div class="input-container">
+                <div class="input-wrapper">
+                    <textarea 
+                        class="input-field" 
+                        id="inputField" 
+                        placeholder="How can I help you today?"
+                        rows="1"
+                    ></textarea>
+                    
+                    <div class="input-actions">
+                        <div class="action-buttons">
+                            <button class="action-btn">💻 Code</button>
+                            <button class="action-btn">✍️ Write</button>
+                            <button class="action-btn">📚 Learn</button>
+                            <button class="action-btn">🌟 Life stuff</button>
+                            <button class="action-btn">✦ Claude's choice</button>
+                        </div>
+                        
+                        <button class="send-btn" id="sendBtn" disabled>
+                            <span>➤</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+# ─── Secrets ────────────────────────────────────────────────────────────────
+# .env holds live credentials. Only .env.example belongs in version control.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# ─── Dependencies ───────────────────────────────────────────────────────────
+node_modules/
+
+# ─── Runtime output ─────────────────────────────────────────────────────────
+# User uploads are runtime data, not source. Committing them also risks
+# publishing whatever a user happened to upload.
+uploads/
+*.log
+logs/
+
+# ─── Local archives / scratch ───────────────────────────────────────────────
+*.tar.gz
+*.zip
+tmp/
+.cache/
+
+# ─── Editor / OS ────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

@@ -1,0 +1,66 @@
+# ─── Secrets ────────────────────────────────────────────────────────────────
+# Every .env variant here holds live credentials (Mongo URI, SMTP password,
+# Supabase service-role key, JWT secret, Vercel OIDC token). Only .example files
+# belong in version control.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.cert
+*.crt
+
+# Stray Firebase config with a hardcoded apiKey.
+astragpt/src/components/.txt
+
+# Throwaway test scripts with live API keys pasted inline.
+test_orbit.js
+astra-backend/test_orbit.js
+astra-backend/test_all_models.ps1
+
+# Vercel / Netlify link data pulls project IDs and env values down locally.
+.vercel
+.netlify
+
+# ─── Build output ───────────────────────────────────────────────────────────
+# Vite inlines every VITE_* value into the bundle at build time, so committed
+# build output republishes those keys even when .env itself is ignored.
+dist/
+dist-ssr/
+build/
+.vite/
+
+# ─── Dependencies ───────────────────────────────────────────────────────────
+node_modules/
+package-lock.json.bak
+
+# ─── Agent / tool local state ───────────────────────────────────────────────
+# crush.db is an 11 MB local session database containing prompt history.
+.crush/
+.claude/settings.local.json
+
+# ─── Runtime output ─────────────────────────────────────────────────────────
+uploads/
+logs/
+*.log
+
+# ─── Local archives / scratch ───────────────────────────────────────────────
+*.tar.gz
+*.zip
+tmp/
+.cache/
+eslint-out.txt
+
+# ─── Python ─────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# ─── Editor / OS ────────────────────────────────────────────────────────────
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
